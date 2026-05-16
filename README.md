@@ -64,7 +64,7 @@ confusion matrix normalized.png
 
 
 
-## YOLO26n
+## YOLOv11n
 
 
 
