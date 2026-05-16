@@ -7,13 +7,15 @@ Thyroid cancerous nodule detection
 
 run this program Using WSL in case of Windows User
 
-## create a virtual environment 
+## Create a virtual environment 
 
 
 ## Activate virtual envioment 
 
 
 ## Install pacadges 
+
+pip install -r requirements.txt
 
 
 ## Pytorch 
@@ -38,6 +40,10 @@ MAC
 
 pip3 install torch torchvision
 
+## Base models 
+
+YOLO26: https://docs.ultralytics.com/models/yolo26
+YOLOv11: https://docs.ultralytics.com/models/yolo11
 
 
 # DATA 
