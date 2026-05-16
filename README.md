@@ -7,18 +7,20 @@ Thyroid cancerous nodule detection
 
 run this program Using WSL in case of Windows User
 
-## Create a virtual environment 
+ 
 
 ```bash
-# Clone the repository
-git clone [https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git)
+# Create a virtual environment 
 
-# Navigate into the directory
+# Activate virtual environment
+
+# Clone repo
 cd your-repo
 
-# Install dependencies
-npm install
-```bash
+# Install requirements
+pip install -r requirements.txt
+
+```
 
 
 ## Activate virtual envioment 
