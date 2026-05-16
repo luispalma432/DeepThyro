@@ -10,13 +10,15 @@ run this program Using WSL in case of Windows User
  
 
 ```bash
-# Create a virtual environment 
+# Create a virtual environment
 
+```
+```bash
 # Activate virtual environment
-
+```
 # Clone repo
 cd your-repo
-
+```bash
 # Install requirements
 pip install -r requirements.txt
 
