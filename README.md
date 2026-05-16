@@ -90,11 +90,12 @@ Data slipt table with augmentations
 
 
 ## YOLO26n
+### YOLO26n_1024
 
 
-results.png 
+
 ![Results YOLO26n_1024](YOLO26_1024_PreAugmented-2/results.png)
-YOLO26_1024_PreAugmented-2/results.png
+
 
 confusion matrix.png 
 
