@@ -54,6 +54,14 @@ YOLOv11: https://docs.ultralytics.com/models/yolo11
 
 labels.jpg
 
+Data slipt table 70/20/10
+
+Data slipt table with augmentations 
+
+
+## Data Augmentations 
+
+## Data Pre Processing 
 
 
 # Best Models Performance 
@@ -72,7 +80,11 @@ confusion matrix normalized.png
 
 ## YOLOv11n
 
+results.png 
 
+confusion matrix.png 
+
+confusion matrix normalized.png 
 
 
 
