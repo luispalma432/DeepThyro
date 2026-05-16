@@ -100,9 +100,10 @@ YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png
 
 
 confusion matrix.png 
-![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
+![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix.png)
 
 confusion matrix normalized.png 
+![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
 
 
 
