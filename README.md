@@ -53,6 +53,7 @@ YOLOv11: https://docs.ultralytics.com/models/yolo11
 
 
 labels.jpg
+![Alt text for screen readers](path/to/image.png) 
 
 Data slipt table 70/20/10
 
