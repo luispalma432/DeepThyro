@@ -11,13 +11,19 @@ run this program Using WSL in case of Windows User
 
 ```bash
 # Create a virtual environment
-
+python3.11 -m venv venv
 ```
 ```bash
 # Activate virtual environment
+source /venv/bin/activate.fish
 ```
+
+```bash
+
 # Clone repo
 cd your-repo
+```
+
 ```bash
 # Install requirements
 pip install -r requirements.txt
