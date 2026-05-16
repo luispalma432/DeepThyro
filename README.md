@@ -18,7 +18,7 @@ cd your-repo
 
 # Install dependencies
 npm install
-
+```bash
 
 
 ## Activate virtual envioment 
