@@ -9,6 +9,17 @@ run this program Using WSL in case of Windows User
 
 ## Create a virtual environment 
 
+```bash
+# Clone the repository
+git clone [https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git)
+
+# Navigate into the directory
+cd your-repo
+
+# Install dependencies
+npm install
+
+
 
 ## Activate virtual envioment 
 
