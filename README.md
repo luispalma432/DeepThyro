@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ## Install pacadges 
 
-pip install -r requirements.txt
+ pip install -r requirements.txt
 
 
 ## Pytorch 
