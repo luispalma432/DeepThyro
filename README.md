@@ -31,35 +31,43 @@ pip install -r requirements.txt
 ```
 
 
-## Activate virtual envioment 
-
-
-## Install pacadges 
-
- pip install -r requirements.txt
-
 
 ## Pytorch 
 
 NVIDIA GPU
 
+
+
+```bash
+# NVIDIA GPU
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126 
 
+```
 
 AMD GPU 
 
+
+```bash
+# AMD GPU
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/rocm7.2
 
+```
 
 CPU 
 
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+```bash
+# CPU
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
+```
 
 MAC
-
-
+```bash
+# MAC
 pip3 install torch torchvision
+
+```
 
 ## Base models 
 
