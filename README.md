@@ -127,9 +127,9 @@ confusion matrix normalized.png
 
 
 
-## Hardware Used 
+## Hardware 
 
-### laptop
+### Laptop
 
 CPU INTEL 11th g7 version 
 
@@ -140,7 +140,7 @@ Memory: 16gb 3200Mhz cl22
 OS:  Linux CachyOS
 
 
-### desktop
+### Desktop
 
 CPU AMD ryzen5 7600X 
 
