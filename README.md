@@ -126,8 +126,9 @@ pip install torch torchvision torchaudio --index-url [https://download.pytorch.o
 
 ## Base models 
 
-YOLO26: https://docs.ultralytics.com/models/yolo26
-YOLOv11: https://docs.ultralytics.com/models/yolo11
+**YOLO26:** https://docs.ultralytics.com/models/yolo26 
+
+**YOLOv11:** https://docs.ultralytics.com/models/yolo11
 
 
 ## Datasets
