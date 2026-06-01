@@ -80,8 +80,8 @@ YOLOv11: https://docs.ultralytics.com/models/yolo11
 
 ## Data distribution 
 
+### Labels
 
-labels.jpg
 ![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
 
 Data slipt table 70/20/10
