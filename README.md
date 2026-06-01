@@ -81,16 +81,17 @@ NVIDIA GPU
 
 ```bash
 # NVIDIA GPU
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126 
+pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu126](https://download.pytorch.org/whl/cu126)
+
 
 ```
 
-AMD GPU or AMD APU
+AMD GPU/APU
 
 
 ```bash
 # AMD GPU
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/rocm7.2
+pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/rocm7.2](https://download.pytorch.org/whl/rocm7.2)
 
 ```
 
@@ -98,10 +99,15 @@ Intel GPU
 
 ```bash
 # Intel 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
+pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/xpu](https://download.pytorch.org/whl/xpu)
 
 ```
+MAC
+```bash
+# MAC
+pip install torch torchvision torchaudio
 
+```
 
 
 CPU 
@@ -109,24 +115,10 @@ CPU
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```bash
 # CPU
-pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-
-```
-Intel APU
-
-```bash
-# Intel 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
+pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
 
 ```
 
-
-MAC
-```bash
-# MAC
-pip install torch torchvision torchaudio
-
-```
 
 ## Base models 
 
