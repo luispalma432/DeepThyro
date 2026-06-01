@@ -5,8 +5,8 @@ Thyroid cancerous nodule detection
 
 
 # Results 
-## Board 
-Success Cases
+## Board: Success Cases
+
 ![Alt text for screen readers](YOLO26n_1024_autobatch/thyroid_board/success_board.jpg) 
 
 
