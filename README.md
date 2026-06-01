@@ -15,20 +15,11 @@ Deepthyro has is different than other implementations because it used the newest
 
 
 
-# Setup
+# Setup 
+## Windows 
 
 run this program Using WSL in case of Windows User
 
- 
-
-```bash
-# Create a virtual environment
-python3.11 -m venv venv
-```
-```bash
-# Activate virtual environment
-source /venv/bin/activate.fish
-```
 
 ```bash
 
@@ -36,10 +27,49 @@ source /venv/bin/activate.fish
 cd your-repo
 ```
 
+
+
+```bash
+# WSL 
+python3.11 -m venv venv
+```
+
+
+
+
+```bash
+# path to the program 
+cd path/to/the/repo 
+```
+
+Follow the Linux procedure 
+
+
+## Linux 
+ ```bash
+
+# Clone repo
+git clone link to repo 
+```
+
+```bash
+
+# Enter the repo
+cd path/to/repo
+```
+
+```bash
+# Create a virtual environment
+python3.11 -m venv venv
+```
+```bash
+# Activate virtual environment
+source /venv/bin/Activate
+```
+
 ```bash
 # Install requirements
 pip install -r requirements.txt
-
 ```
 
 
@@ -49,14 +79,13 @@ pip install -r requirements.txt
 NVIDIA GPU
 
 
-
 ```bash
 # NVIDIA GPU
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126 
 
 ```
 
-AMD GPU 
+AMD GPU or AMD APU
 
 
 ```bash
@@ -64,6 +93,16 @@ AMD GPU
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/rocm7.2
 
 ```
+
+Intel GPU
+
+```bash
+# Intel 
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
+
+```
+
+
 
 CPU 
 
@@ -73,11 +112,19 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 ```
+Intel APU
+
+```bash
+# Intel 
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
+
+```
+
 
 MAC
 ```bash
 # MAC
-pip3 install torch torchvision
+pip install torch torchvision torchaudio
 
 ```
 
