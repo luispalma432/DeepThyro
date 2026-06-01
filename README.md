@@ -98,20 +98,23 @@ Data slipt table with augmentations
 
 
 ## YOLO26n
-### Confusion matrix Normalized
-
-
-
+### Results 
 ![Results YOLO26n_1024](YOLO26_1024_PreAugmented-2/results.png)
 
-YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png
 
+### Confusion matrix Normalized
+![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
 
-confusion matrix.png 
+### Confusion matrix Normalized
+
 ![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix.png)
 
-confusion matrix normalized.png 
-![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
+
+
+
+
+
+
 
 
 
