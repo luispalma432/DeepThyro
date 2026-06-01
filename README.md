@@ -3,6 +3,14 @@
 Thyroid cancerous nodule detection 
 
 
+
+# Results 
+## Board 1
+Image board 1
+![Alt text for screen readers]() 
+
+
+
 # Setup
 
 run this program Using WSL in case of Windows User
