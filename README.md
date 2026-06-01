@@ -4,14 +4,18 @@ Thyroid cancerous nodule detection using a modified version of Yolo26n with 1024
 Deepthyro has is different than other implementations because it used the newest model from the YOLO models with a MuSGD optimizer, and utilization of Breast Cancer detection due to similarities in TI-RADS and BI-RADS classification models, and maybe could be the way to have a reliable cancer detection system in ultrasound imaging.
 
 
-## Datasets
-
-
 
 # Results 
 ## Board: Success Cases
 
 ![Alt text for screen readers](YOLO26n_1024_autobatch/thyroid_board/success_board.jpg) 
+
+# Labels
+
+![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
+
+
+
 
 
 
@@ -126,24 +130,30 @@ YOLO26: https://docs.ultralytics.com/models/yolo26
 YOLOv11: https://docs.ultralytics.com/models/yolo11
 
 
-# DATA 
+## Datasets
+TN5000
+TG3K 
+Breast Cancer
 
+## TI-RADS and BI-RADS 
 
-## Data distribution 
+Table 
 
-### Labels
+## Dataset Distribution 
+### Before Augmentations 
+table 
+
+## After Augmentations 
+table
+
+## Labels
 
 ![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
-
-Data slipt table 70/20/10
-
-Data slipt table with augmentations 
 
 
 ## Data Augmentations 
 
 ## Data Pre Processing 
-
 
 # Best Models Performance 
 
