@@ -98,7 +98,7 @@ Data slipt table with augmentations
 
 
 ## YOLO26n
-### YOLO26n_1024
+### Confusion matrix Normalized
 
 
 
