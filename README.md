@@ -5,9 +5,9 @@ Thyroid cancerous nodule detection
 
 
 # Results 
-## Board 1
-Image board 1
-![Alt text for screen readers]() 
+## Board 
+Success Cases
+![Alt text for screen readers](YOLO26n_1024_autobatch/thyroid_board/success_board.jpg) 
 
 
 
