@@ -1,6 +1,10 @@
 # DeepThyro
 
-Thyroid cancerous nodule detection 
+Thyroid cancerous nodule detection using a modified version of Yolo26n with 1024*1024 image size using a custom dataset, based on TN500, TG3K, Breast Cancer repository and Custom annotations. The datset is not balanced with heavy bias twoards malignancy, the main objective of this model is to create a effective dettection so it gives a solid foundations to TI-RADS classification models, and segmentation models.
+Deepthyro has is different than other implementations because it used the newest model from the YOLO models with a MuSGD optimizer, and utilization of Breast Cancer detection due to similarities in TI-RADS and BI-RADS classification models, and maybe could be the way to have a reliable cancer detection system in ultrasound imaging.
+
+
+## Datasets
 
 
 
