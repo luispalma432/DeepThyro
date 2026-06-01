@@ -15,6 +15,23 @@ Deepthyro has is different than other implementations because it used the newest
 ![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
 
 
+# Best Models Performance 
+
+## YOLO26n
+### Results 
+![Results YOLO26n_1024](YOLO26_1024_PreAugmented-2/results.png)
+
+
+### Confusion matrix Normalized
+![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
+
+### Confusion matrix Normalized
+
+![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix.png)
+
+### Configuration 
+
+
 
 
 
@@ -132,9 +149,9 @@ pip install torch torchvision torchaudio --index-url [https://download.pytorch.o
 
 
 ## Datasets
-TN5000
-TG3K 
-Breast Cancer
+**TN5000:**
+**TG3K:**
+**Breast Cancer:**
 
 ## TI-RADS and BI-RADS 
 
@@ -142,9 +159,11 @@ Table
 
 ## Dataset Distribution 
 ### Before Augmentations 
+
 table 
 
 ## After Augmentations 
+
 table
 
 ## Labels
@@ -157,38 +176,6 @@ table
 ## Data Pre Processing 
 
 # Best Models Performance 
-
-
-## YOLO26n
-### Results 
-![Results YOLO26n_1024](YOLO26_1024_PreAugmented-2/results.png)
-
-
-### Confusion matrix Normalized
-![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix_normalized.png)
-
-### Confusion matrix Normalized
-
-![confusion matrix](YOLO26_1024_PreAugmented-2/confusion_matrix.png)
-
-
-
-
-
-
-
-
-
-
-## YOLOv11n
-
-results.png 
-
-confusion matrix.png 
-
-confusion matrix normalized.png 
-
-
 
 
 
