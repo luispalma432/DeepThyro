@@ -8,8 +8,8 @@ import numpy as np
 import seaborn as sns
 from ultralytics import YOLO
 
-model = YOLO("best.pt")
-
+# Load model once globally
+model = YOLO("DeepThyro7.pt")
 
 plt.style.use("dark_background")
 sns.set_context("paper", font_scale=1.2)
@@ -95,7 +95,7 @@ def draw_predictions(image_path, json_path):
 
 def create_board(directory, output_filename, title):
     """
-    Compiles a sleek, zero-margin 6-scan grid.
+    Compiles a sleek, zero-margin 6-scan grid (2x3).
     """
     image_files = glob.glob(os.path.join(directory, "*.jpg"))
 
@@ -110,7 +110,6 @@ def create_board(directory, output_filename, title):
     rows = int(np.ceil(n_images / cols))
 
     fig, axes = plt.subplots(rows, cols, figsize=(16, 5 * rows), facecolor="#121212")
-
     fig.suptitle(title, fontsize=22, weight="bold", color="#E0E0E0", y=0.96)
 
     if rows == 1:
@@ -127,7 +126,6 @@ def create_board(directory, output_filename, title):
 
         axes[i].imshow(annotated_img)
         axes[i].axis("off")
-
         axes[i].set_title(
             os.path.basename(img_path), fontsize=11, color="#A0A0A0", pad=8
         )
@@ -138,10 +136,90 @@ def create_board(directory, output_filename, title):
     plt.subplots_adjust(
         wspace=0.05, hspace=0.1, top=0.88, bottom=0.05, left=0.02, right=0.98
     )
-
     plt.savefig(output_filename, dpi=300, bbox_inches="tight", facecolor="#121212")
     plt.close()
     print(f"[Success] Validation board saved -> {output_filename}")
+
+
+def create_detection_board(images_dir, masks_dir, output_filename, title):
+    """
+    Compiles a 3-column grid per image: Original Image | Prediction | Ground Truth Mask
+    """
+    image_files = sorted(glob.glob(os.path.join(images_dir, "*.jpg")))
+
+    if not image_files:
+        print(f"[Warning] No images found in {images_dir}")
+        return
+
+    # Limit to 3 images to keep the board clean and vertical (a 3x3 grid)
+    image_files = image_files[:3]
+    rows = len(image_files)
+    cols = 3
+
+    fig, axes = plt.subplots(rows, cols, figsize=(18, 5 * rows), facecolor="#121212")
+    fig.suptitle(title, fontsize=22, weight="bold", color="#E0E0E0", y=0.96)
+
+    # Ensure axes is always 2D even if there's only 1 row
+    if rows == 1:
+        axes = np.array([axes])
+
+    for i, img_path in enumerate(image_files):
+        base_name = os.path.basename(img_path)
+
+        # 1. Original Image
+        orig_img = cv2.imread(img_path)
+        orig_img = cv2.cvtColor(orig_img, cv2.COLOR_BGR2RGB)
+
+        # 2. Prediction Image
+        json_path = img_path.replace(".jpg", ".json")
+        if not os.path.exists(json_path):
+            generate_annotations(img_path)
+        pred_img = draw_predictions(img_path, json_path)
+
+        # 3. Mask Image (Try .jpg first, fallback to .png if your masks are saved differently)
+        mask_path = os.path.join(masks_dir, base_name)
+        if not os.path.exists(mask_path):
+            mask_path = mask_path.replace(".jpg", ".png")
+
+        if os.path.exists(mask_path):
+            mask_img = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+        else:
+            # Create a blank black image if mask is missing so the script doesn't crash
+            print(
+                f"[Warning] Mask missing for {base_name}, generating blank placeholder."
+            )
+            mask_img = np.zeros_like(orig_img[:, :, 0])
+
+        # Plot Original
+        axes[i, 0].imshow(orig_img)
+        axes[i, 0].axis("off")
+        if i == 0:
+            axes[i, 0].set_title(
+                "Original Ultrasound", fontsize=16, color="#E0E0E0", pad=12
+            )
+
+        # Plot Prediction
+        axes[i, 1].imshow(pred_img)
+        axes[i, 1].axis("off")
+        if i == 0:
+            axes[i, 1].set_title(
+                "YOLO26 Prediction", fontsize=16, color="#E0E0E0", pad=12
+            )
+
+        # Plot Mask (using a bone or gray colormap to match medical imaging aesthetics)
+        axes[i, 2].imshow(mask_img, cmap="bone")
+        axes[i, 2].axis("off")
+        if i == 0:
+            axes[i, 2].set_title(
+                "Ground Truth Mask", fontsize=16, color="#E0E0E0", pad=12
+            )
+
+    plt.subplots_adjust(
+        wspace=0.05, hspace=0.05, top=0.88, bottom=0.05, left=0.02, right=0.98
+    )
+    plt.savefig(output_filename, dpi=300, bbox_inches="tight", facecolor="#121212")
+    plt.close()
+    print(f"[Success] Detection board saved -> {output_filename}")
 
 
 def sucess_boards(success_dir):
@@ -158,12 +236,37 @@ def fail_boards(fail_dir):
     create_board(fail_dir, output_path, "DEEPTHYRO: FAILURE cases and errors")
 
 
+def detection_boards(detection_images_dir, detection_masks_dir):
+    print(f"--- Generating Detection Board (Image vs Pred vs Mask) ---")
+    # Save the output image one level up from the images folder
+    parent_dir = os.path.dirname(os.path.dirname(detection_images_dir))
+    output_path = os.path.join(parent_dir, "detection_board.jpg")
+
+    create_detection_board(
+        images_dir=detection_images_dir,
+        masks_dir=detection_masks_dir,
+        output_filename=output_path,
+        title="DEEPTHYRO: Detection Nodule Board",
+    )
+
+
 if __name__ == "__main__":
     success_dir = "thyroid_board/success"
     fail_dir = "thyroid_board/failure"
 
+    # New Detection Directories
+    det_images_dir = "thyroid_board/Detection/Images"
+    det_masks_dir = "thyroid_board/Detection/masks"
+
+    # Ensure all directories exist
     os.makedirs(success_dir, exist_ok=True)
     os.makedirs(fail_dir, exist_ok=True)
+    os.makedirs(det_images_dir, exist_ok=True)
+    os.makedirs(det_masks_dir, exist_ok=True)
 
+    # Generate Standard Boards
     sucess_boards(success_dir)
     fail_boards(fail_dir)
+
+    # Generate New Detection Board
+    detection_boards(det_images_dir, det_masks_dir)

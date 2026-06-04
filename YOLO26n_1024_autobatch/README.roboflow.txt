@@ -12,10 +12,6 @@ Roboflow is an end-to-end computer vision platform that helps you
 * export, train, and deploy computer vision models
 * use active learning to improve your dataset over time
 
-For state of the art Computer Vision training notebooks you can use with this dataset,
-visit https://github.com/roboflow/notebooks
-
-To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
 The dataset includes 12684 images.
 Nodules are annotated in YOLO26 format.
@@ -31,5 +27,3 @@ The following augmentation was applied to create 3 versions of each source image
 * Equal probability of one of the following 90-degree rotations: none, clockwise, counter-clockwise, upside-down
 * Random brigthness adjustment of between -15 and +15 percent
 * Random exposure adjustment of between -12 and +12 percent
-
-
