@@ -166,9 +166,6 @@ table
 
 table
 
-## Labels
-
-![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
 
 
 ## Data Augmentations 
