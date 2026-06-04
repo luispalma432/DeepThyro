@@ -10,6 +10,10 @@ Deepthyro has is different than other implementations because it used the newest
 
 ![Alt text for screen readers](YOLO26n_1024_autobatch/thyroid_board/success_board.jpg) 
 
+## Board: Success Cases
+
+![Alt text for screen readers](YOLO26n_1024_autobatch/thyroid_board/detection_board.jpg) 
+
 # Labels
 
 ![Alt text for screen readers](YOLO26_1024_PreAugmented-2/labels.jpg) 
