@@ -49,7 +49,7 @@ run this program Using WSL in case of Windows User
 ```bash
 
 # Clone repo
-[cd your-repo](https://github.com/luispalma432/DeepThyro.git)
+git clone (https://github.com/luispalma432/DeepThyro.git)
 ```
 
 
